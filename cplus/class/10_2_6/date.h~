@@ -1,0 +1,12 @@
+class Date
+{
+	public:
+		int year() const;
+	private:
+		int y, m ,d;
+};
+
+int Date::year() const
+{
+	return y;
+}

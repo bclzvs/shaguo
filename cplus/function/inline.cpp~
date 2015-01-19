@@ -1,0 +1,23 @@
+/*
+test inline function
+*/
+#include <stdio.h>
+inline __atribute__((always_inline)) int max(int x, int y)
+{
+	return x > y ? x : y;
+}
+void foo();
+int main()
+{
+	int i = 10;
+	int j = 20;
+	printf("max = %d\n", max(i,j));	
+	foo();
+}
+
+void foo()
+{
+	int i = 10;
+	int j = 20;
+	printf("max = %d\n", max(i,j));	
+}

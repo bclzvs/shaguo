@@ -1,0 +1,7 @@
+#include <stdio.h>
+#include "date.h"
+int main()
+{
+	Date date;
+	printf("date.year = %d\n", date.year());
+}
