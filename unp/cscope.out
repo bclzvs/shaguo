@@ -1,0 +1,214 @@
+cscope 15 $HOME/liuzw/unp -q 0000000041 0000001044
+	@echo_server.c
+
+1 
+	~<¡dlib.h
+>
+
+2 
+	~<¡dio.h
+>
+
+3 
+	~<¡ršg.h
+>
+
+4 
+	~<uni¡d.h
+>
+
+5 
+	~<sys/ty³s.h
+>
+
+6 
+	~<sys/sock‘.h
+>
+
+7 
+	~<Ãtš‘/š.h
+>
+
+8 
+	~<Ãtdb.h
+>
+
+9 
+	~<¬·/š‘.h
+>
+
+10 
+	~<”ºo.h
+>
+
+11 
+sock‘addr
+ 
+	tSA
+;
+
+12 
+	$maš
+()
+
+14 
+£rvfd
+, 
+þifd
+;
+
+15 
+buf
+[256];
+
+16 
+sockËn_t
+ 
+þž’
+;
+
+17 
+sockaddr_š
+ 
+£rvaddr
+, 
+þŸddr
+;
+
+19 ifÐ(
+£rvfd
+ = 
+	`sock‘
+(
+AF_INET
+, 
+SOCK_STREAM
+)) < 0){
+
+20 
+	`´štf
+("sock‘ƒ¼Ü:%s",
+	`¡»¼Ü
+(
+”ºo
+));
+
+23 
+	`mem£t
+(&
+£rvaddr
+, 0, (servaddr));
+
+24 
+£rvaddr
+.
+sš_çmžy
+ = 
+AF_INET
+;
+
+25 
+£rvaddr
+.
+sš_addr
+.
+š_addr
+ = 
+	`htÚl
+(0);
+
+26 
+£rvaddr
+.
+sš_pÜt
+ = 
+	`htÚs
+(3456);
+
+27 
+	`bšd
+(
+£rvfd
+, (
+SA
+)&
+£rvaddr
+, (servaddr));
+
+28 
+	`li¡’
+(
+£rvfd
+, 5);
+
+30 
+	`´štf
+("waiting connection\n");
+
+31 
+þifd
+ = 
+	`acû±
+(
+AF_INET
+, (
+SA
+)&
+þŸddr
+, &
+þž’
+);
+
+32 
+	`´štf
+("connection from %s:%d\n",
+
+33 
+	`š‘_ÁÝ
+(
+AF_INET
+,
+þŸddr
+.
+sš_addr
+.
+š_addr
+),
+
+34 
+	`Áohs
+(
+þŸddr
+.
+sš_pÜt
+)
+
+36 do(
+þifd
+);
+
+37 
+	`þo£
+(
+þifd
+);
+
+39 
+	}
+}
+
+41 do(
+sockfd
+)
+
+44 
+	}
+}
+
+	@
+1
+.
+0
+1
+14
+echo_server.c

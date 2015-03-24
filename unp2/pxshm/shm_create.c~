@@ -1,0 +1,23 @@
+#include "unp2.h"
+#include <sys/mman.h>
+
+int main(int argc, char **argv)
+{
+	int		c, flags, length, fd;
+	flags = O_RDWR | O_CREAT;
+
+	while ((c = getopt(argc, argv, "e")) != -1){
+		switch(c) {
+			case 'e':
+				flags |= O_EXCL;
+				break;				
+		}
+	}
+	if(optind != argc- 2)
+		usage("-e <name> <length>");
+
+	length = atoi(argv[optind + 1]);	
+	if ((fd = shm_open(argv[optind], flags, FILE_MODE)) < 0) err_abort("shm_open failed");
+	if (ftruncate(fd, length) == -1) err_abort("ftruncate failed");
+	
+}

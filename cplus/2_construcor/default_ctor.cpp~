@@ -1,0 +1,13 @@
+class Empty {
+public:
+	Empty() {}
+	Empty(const Empty &rhs) {}
+	~Empty() {}
+	Empty& operator=(const Empty& rhs) {}
+};
+
+int main()
+{
+	Empty e;
+	return 0;
+}

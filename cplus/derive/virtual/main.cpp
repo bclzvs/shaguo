@@ -1,0 +1,10 @@
+#include "Employee.h"
+#include "Manager.h"
+
+int main()
+{
+	Employee e("zw", "liu");
+	e.print();
+	Manager m("san", "zhang", 4);
+	m.print();
+}

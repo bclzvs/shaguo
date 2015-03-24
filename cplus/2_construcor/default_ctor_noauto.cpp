@@ -1,0 +1,20 @@
+/*
+ 测试不会自动生成operator=
+*/
+class Foo{
+private:
+	const int num;
+public:
+	Foo();
+};
+
+Foo::Foo():num(0)
+{
+}
+
+int main()
+{
+	Foo f1;
+	Foo f2(f1);
+	f2 = f1; // error, can't set 'const int num'
+}
