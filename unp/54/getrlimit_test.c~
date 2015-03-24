@@ -1,0 +1,10 @@
+#include <stdio.h>
+#include <sys/resource.h>
+#include <sys/time.h>
+#include <unistd.h>
+int main()
+{
+	struct rlimit limit;
+	getrlimit(RLIMIT_NOFILE, &limit);
+	printf("max fd number:%d\n", limit.rlim_cur);
+}
