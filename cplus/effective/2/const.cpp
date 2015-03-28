@@ -8,6 +8,7 @@ int main()
 	//printf("%d\n", GamePlayer::NumTurns);
 	GamePlayer g;
 	printf("%d\n", g.score(1));
+	printf("%d\n", GamePlayer::PubNum);
 	printf("AspecRatio %d\n", AspecRatio);
 	//const double& i = AspecRatio;
 	//printf("i %d\n",i);
